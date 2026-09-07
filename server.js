@@ -26,7 +26,7 @@ const Profile = mongoose.model('Profile', profileSchema);
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json({ limit: '100kb' }));
-app.use(rateLimit({ windowMs: 15 * 60 * 1000, limit: 100 }));
+app.use('/api', rateLimit({ windowMs: 15 * 60 * 1000, limit: 300 }));
 
 async function readLocalProfile() {
   return JSON.parse(await fs.readFile(dataPath, 'utf8'));
