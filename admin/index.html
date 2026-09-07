@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="panel">
+    <div class="header-row">
+      <div><p class="eyebrow">Profile CMS</p><h1>Update your profile</h1></div>
+      <a href="../index.html">View site</a>
+    </div>
+    <form id="login-form" class="stack">
+      <label>Admin password<input id="password" type="password" required autocomplete="current-password"></label>
+      <button type="submit">Sign in</button>
+      <p id="login-status" class="status"></p>
+    </form>
+    <form id="profile-form" class="stack hidden">
+      <label>Name<input name="name" required></label>
+      <label>Headline<textarea name="headline" rows="3" required></textarea></label>
+      <label>About intro<textarea name="aboutIntro" rows="3"></textarea></label>
+      <label>Bio<textarea name="bio" rows="4"></textarea></label>
+      <div class="grid">
+        <label>Email<input name="email" type="email" required></label>
+        <label>Phone<input name="phone"></label>
+        <label>Location<input name="location"></label>
+        <label>Website<input name="website" type="url"></label>
+        <label>Birthday<input name="birthday"></label>
+        <label>Age<input name="age"></label>
+        <label>Degree<input name="degree"></label>
+        <label>Freelance status<input name="freelance"></label>
+      </div>
+      <label>About page subtitle<input name="aboutPageSubtitle"></label>
+      <label>Contact page subtitle<input name="contactPageSubtitle"></label>
+      <label>Resume profile<textarea name="resumeProfile" rows="3"></textarea></label>
+      <label>All page content: services, projects, skills, education, experience, facts and social links<textarea name="content" rows="28" spellcheck="false"></textarea></label>
+      <button type="submit">Save changes</button>
+      <p id="save-status" class="status"></p>
+    </form>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
