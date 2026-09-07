@@ -7,6 +7,10 @@ async function loadDynamicProfile() {
       const key = element.dataset.profile;
       if (profile[key] !== undefined) element.textContent = profile[key];
     });
+    document.querySelectorAll('[data-profile-path]').forEach((element) => {
+      const value = element.dataset.profilePath.split('.').reduce((result, key) => result?.[key], profile);
+      if (value !== undefined) element.textContent = value;
+    });
     document.querySelectorAll('[data-profile-href]').forEach((element) => {
       const key = element.dataset.profileHref;
       if (profile[key]) element.href = profile[key];
@@ -29,9 +33,29 @@ async function loadDynamicProfile() {
     renderFacts(profile.facts || []);
     renderEducation(profile.education || []);
     renderExperience(profile.experience || []);
+    renderTestimonials(profile.testimonials || []);
   } catch {
     // Static content remains visible when the API is unavailable.
   }
+}
+
+function renderTestimonials(testimonials) {
+  const container = document.querySelector('[data-dynamic-testimonials]');
+  if (!container || !testimonials.length) return;
+  container.replaceChildren(...testimonials.map((testimonial) => {
+    const card = document.createElement('div');
+    card.className = 'testimonial';
+    const image = document.createElement('img');
+    image.className = 'testimonial-img'; image.src = testimonial.image || ''; image.alt = testimonial.name || 'Client testimonial';
+    const quote = document.createElement('p');
+    quote.className = 'testimonial-text'; quote.textContent = `" ${testimonial.quote} "`;
+    const author = document.createElement('div');
+    author.className = 'testimonial-author'; author.textContent = testimonial.name;
+    const role = document.createElement('div');
+    role.className = 'testimonial-role'; role.textContent = testimonial.role;
+    card.append(image, quote, author, role);
+    return card;
+  }));
 }
 
 function renderSkills(skills) {

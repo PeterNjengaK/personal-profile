@@ -14,6 +14,25 @@
   "aboutPageSubtitle": "Professional Profile & Skills Overview",
   "contactPageSubtitle": "Get in touch for any services you may require at very affordable rates",
   "resumeProfile": "Innovative and deadline-driven Web Developer, Android Developer, Graphic Designer, and Video Editor with 3+ years of experience designing user-centered digital and print material.",
+  "pageCopy": {
+    "aboutAcademicIntro": "My academic qualifications are as highlighted below:",
+    "skillsTitle": "My Skills",
+    "skillsSubtitle": "Below are my skillset areas",
+    "factsTitle": "Professional Facts",
+    "factsSubtitle": "My engagement levels and achievements",
+    "testimonialsTitle": "Client Testimonials",
+    "testimonialsSubtitle": "What my clients say about my work",
+    "portfolioTitle": "My Portfolio",
+    "portfolioSubtitle": "A showcase of my work and projects",
+    "resumeTitle": "My Resume",
+    "resumeSubtitle": "Professional Experience & Education",
+    "servicesTitle": "My Services",
+    "servicesSubtitle": "Professional Services I Offer",
+    "professionalProfileTitle": "Professional Profile",
+    "educationTitle": "Education",
+    "experienceTitle": "Experience",
+    "contactTitle": "Contact Me"
+  },
   "skills": [
     { "name": "HTML", "level": 100 }, { "name": "CSS", "level": 85 }, { "name": "JavaScript", "level": 70 },
     { "name": "Java", "level": 90 }, { "name": "Kotlin", "level": 95 }, { "name": "PHP", "level": 68 },
@@ -35,6 +54,11 @@
     { "number": "123", "label": "Clients" }, { "number": "28", "label": "Projects" },
     { "number": "1453", "label": "Hours Of Support" }, { "number": "5", "label": "Team Members" }
   ],
+  "testimonials": [
+    { "name": "Rev. John Kamau", "role": "VWO-Karati - Reverend Pastor", "quote": "Peter is a very committed individual who serves us well as the head of our Church's media department. He is vastly knowledgeable in matters livestreaming and graphic design.", "image": "images/testimonials-2.png" },
+    { "name": "Mercy Kiragu", "role": "Trainee & Mentee", "quote": "Peter is really good at what he does. He is what I call very close to a computer genius.", "image": "images/testimonials-1.jpg" }
+  ],
+  "footerText": "All rights reserved.",
   "services": [
     { "title": "Project Management", "description": "I oversee projects from beginning to end, keeping tasks organized, on schedule, and focused on successful results.", "icon": "project" },
     { "title": "Web and Android Development", "description": "I build practical, responsive web and mobile experiences for organizations and individuals.", "icon": "code" },

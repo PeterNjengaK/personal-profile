@@ -7,38 +7,59 @@
   <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-  <main class="panel">
-    <div class="header-row">
-      <div><p class="eyebrow">Profile CMS</p><h1>Update your profile</h1></div>
-      <a href="../index.html">View site</a>
-    </div>
-    <form id="login-form" class="stack">
-      <label>Admin password<input id="password" type="password" required autocomplete="current-password"></label>
-      <button type="submit">Sign in</button>
-      <p id="login-status" class="status"></p>
-    </form>
-    <form id="profile-form" class="stack hidden">
-      <label>Name<input name="name" required></label>
-      <label>Headline<textarea name="headline" rows="3" required></textarea></label>
-      <label>About intro<textarea name="aboutIntro" rows="3"></textarea></label>
-      <label>Bio<textarea name="bio" rows="4"></textarea></label>
-      <div class="grid">
-        <label>Email<input name="email" type="email" required></label>
-        <label>Phone<input name="phone"></label>
-        <label>Location<input name="location"></label>
-        <label>Website<input name="website" type="url"></label>
-        <label>Birthday<input name="birthday"></label>
-        <label>Age<input name="age"></label>
-        <label>Degree<input name="degree"></label>
-        <label>Freelance status<input name="freelance"></label>
-      </div>
-      <label>About page subtitle<input name="aboutPageSubtitle"></label>
-      <label>Contact page subtitle<input name="contactPageSubtitle"></label>
-      <label>Resume profile<textarea name="resumeProfile" rows="3"></textarea></label>
-      <label>All page content: services, projects, skills, education, experience, facts and social links<textarea name="content" rows="28" spellcheck="false"></textarea></label>
-      <button type="submit">Save changes</button>
-      <p id="save-status" class="status"></p>
-    </form>
+  <main class="shell">
+    <section class="auth-panel" id="auth-panel">
+      <p class="eyebrow">Profile CMS</p><h1>Your website, in one place.</h1>
+      <p class="lede">Sign in to manage every public page, collection, link, and piece of copy.</p>
+      <form id="login-form" class="stack">
+        <label>Admin password<input id="password" type="password" required autocomplete="current-password"></label>
+        <button type="submit">Sign in to dashboard</button>
+        <p id="login-status" class="status"></p>
+      </form>
+    </section>
+    <section class="dashboard hidden" id="dashboard">
+      <header class="dashboard-header">
+        <div><p class="eyebrow">Profile CMS / Control room</p><h1>Edit your website</h1><p class="lede">Changes are published to the public site when you save.</p></div>
+        <a class="site-link" href="../index.html" target="_blank" rel="noreferrer">View live site ↗</a>
+      </header>
+      <form id="profile-form">
+        <nav class="tabs" aria-label="Content sections">
+          <button type="button" class="tab active" data-tab="identity">Identity</button>
+          <button type="button" class="tab" data-tab="pages">Page copy</button>
+          <button type="button" class="tab" data-tab="collections">Collections</button>
+          <button type="button" class="tab" data-tab="links">Links</button>
+          <button type="button" class="tab" data-tab="advanced">Advanced</button>
+        </nav>
+        <section class="tab-panel active" data-panel="identity">
+          <div class="section-heading"><div><p class="eyebrow">01 / Identity</p><h2>How people find you</h2></div><p>These fields appear across your home, about, resume, and contact pages.</p></div>
+          <div class="field-grid">
+            <label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label>
+            <label>Headline<textarea name="headline" rows="3" required></textarea></label><label>About intro<textarea name="aboutIntro" rows="3"></textarea></label>
+            <label>Bio<textarea name="bio" rows="4"></textarea></label><label>Resume profile<textarea name="resumeProfile" rows="4"></textarea></label>
+            <label>Phone<input name="phone"></label><label>Location<input name="location"></label>
+            <label>Website<input name="website" type="url"></label><label>Birthday<input name="birthday"></label>
+            <label>Age<input name="age"></label><label>Degree<input name="degree"></label><label>Freelance status<input name="freelance"></label>
+          </div>
+        </section>
+        <section class="tab-panel" data-panel="pages">
+          <div class="section-heading"><div><p class="eyebrow">02 / Page copy</p><h2>Headings and supporting text</h2></div><p>Rewrite section titles without opening the code.</p></div>
+          <div class="field-grid" id="page-copy-fields"></div>
+        </section>
+        <section class="tab-panel" data-panel="collections">
+          <div class="section-heading"><div><p class="eyebrow">03 / Collections</p><h2>Content that repeats</h2></div><p>Add, remove, reorder, and edit cards, skills, facts, education, experience, and testimonials.</p></div>
+          <div id="collection-editors"></div>
+        </section>
+        <section class="tab-panel" data-panel="links">
+          <div class="section-heading"><div><p class="eyebrow">04 / Links</p><h2>Contact and social presence</h2></div><p>Empty links stay hidden from visitors.</p></div>
+          <div class="field-grid" id="link-fields"></div>
+        </section>
+        <section class="tab-panel" data-panel="advanced">
+          <div class="section-heading"><div><p class="eyebrow">05 / Advanced</p><h2>Full document editor</h2></div><p>Use this for custom fields or content not covered by the visual editor.</p></div>
+          <label>Complete profile JSON<textarea id="raw-content" rows="28" spellcheck="false"></textarea></label>
+        </section>
+        <footer class="save-bar"><span id="save-status" class="status"></span><button type="submit">Save and publish changes</button></footer>
+      </form>
+    </section>
   </main>
   <script src="admin.js"></script>
 </body>
