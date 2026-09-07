@@ -108,8 +108,11 @@ function collectCollections() {
 }
 
 async function loadProfile() {
-  const response = await fetch('../api/profile');
-  if (!response.ok) throw new Error('Could not load profile.');
+  const response = await fetch('../api/profile', { credentials: 'same-origin' });
+  if (!response.ok) {
+    if (response.status === 429) throw new Error('The server is busy. Wait a minute, then try again.');
+    throw new Error(`Could not load profile (${response.status}).`);
+  }
   fillForm(await response.json());
   loginForm.classList.add('hidden'); profileForm.classList.remove('hidden');
 }
@@ -121,9 +124,14 @@ document.querySelectorAll('.tab').forEach((tab) => tab.addEventListener('click',
 
 loginForm.addEventListener('submit', async (event) => {
   event.preventDefault(); loginStatus.textContent = 'Signing in...'; loginStatus.classList.remove('error');
-  const response = await fetch('../api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: document.querySelector('#password').value }) });
-  if (!response.ok) { loginStatus.textContent = 'Invalid password.'; loginStatus.classList.add('error'); return; }
-  await loadProfile();
+  try {
+    const response = await fetch('../api/auth/login', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: document.querySelector('#password').value }) });
+    if (!response.ok) { loginStatus.textContent = response.status === 429 ? 'Too many attempts. Wait a minute and try again.' : 'Invalid password.'; loginStatus.classList.add('error'); return; }
+    await loadProfile();
+  } catch (error) {
+    loginStatus.textContent = error.message || 'Could not connect to the server.';
+    loginStatus.classList.add('error');
+  }
 });
 
 profileForm.addEventListener('submit', async (event) => {
