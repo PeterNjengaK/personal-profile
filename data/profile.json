@@ -164,20 +164,7 @@
       "label": "Team Members"
     }
   ],
-  "testimonials": [
-    {
-      "name": "Rev. John Kamau",
-      "role": "VWO-Karati - Reverend Pastor",
-      "quote": "Peter is a very committed individual who serves us well as the head of our Church's media department. He is vastly knowledgeable in matters livestreaming and graphic design.",
-      "image": "images/testimonials-2.png"
-    },
-    {
-      "name": "Mercy Kiragu",
-      "role": "Trainee & Mentee",
-      "quote": "Peter is really good at what he does. He is what I call very close to a computer genius.",
-      "image": "images/testimonials-1.jpg"
-    }
-  ],
+  "testimonials": [],
   "footerText": "All rights reserved.",
   "services": [
     {
