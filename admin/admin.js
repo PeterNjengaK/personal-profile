@@ -1,5 +1,7 @@
 const loginForm = document.querySelector('#login-form');
 const profileForm = document.querySelector('#profile-form');
+const authPanel = document.querySelector('#auth-panel');
+const dashboard = document.querySelector('#dashboard');
 const loginStatus = document.querySelector('#login-status');
 const saveStatus = document.querySelector('#save-status');
 
@@ -114,7 +116,7 @@ async function loadProfile() {
     throw new Error(`Could not load profile (${response.status}).`);
   }
   fillForm(await response.json());
-  loginForm.classList.add('hidden'); profileForm.classList.remove('hidden');
+  authPanel.classList.add('hidden'); dashboard.classList.remove('hidden');
 }
 
 document.querySelectorAll('.tab').forEach((tab) => tab.addEventListener('click', () => {
