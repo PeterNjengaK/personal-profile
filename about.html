@@ -532,6 +532,25 @@
       }
     }
 
+    @media (max-width: 390px) {
+      body { overflow-x: hidden; }
+      .container { padding: 0 1rem; }
+      header { padding: 0.75rem 0; }
+      .logo { height: 2rem; }
+      nav { top: 4rem; }
+      .about-hero { padding: 6rem 0 3rem !important; }
+      .section-title { font-size: 1.65rem; }
+      .section-subtitle { font-size: 0.95rem; }
+      .about-intro, .profile-card, .skills-container, .testimonials-container { padding: 1.25rem; }
+      .profile-grid, .skills-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .profile-card { min-width: 0; overflow-wrap: anywhere; }
+      .profile-card .info-item span { min-width: 0; overflow-wrap: anywhere; }
+      .facts-container { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .fact-box { padding: 1rem 0.5rem; }
+      .fact-number { font-size: 1.75rem; }
+      .social-icons { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    }
+
     /* Animation */
     @keyframes fadeIn {
       from {
@@ -560,16 +579,17 @@
       animation-delay: 0.6s;
     }
   </style>
+  <link rel="stylesheet" href="profile.css?v=studio-2">
+  <script src="profile-ui.js?v=studio-2" defer></script>
 </head>
-<body>
+<body class="inner-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header>
     <div class="container header-container">
-      <div>
-        <img src="images/logo.png" alt="Peter Njenga Logo" class="logo">
-      </div>
+      <a class="wordmark" href="index.html" aria-label="Peter Njenga home"><img class="head-logo" src="images/logo.png" alt="Peter Njenga" width="40" height="40"><span class="wordmark-caption">PERSONAL PROFILE</span></a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -588,12 +608,12 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- About Hero Section -->
-    <section class="about-hero" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(29, 78, 216, 0.9) 100%); color: white; padding: 8rem 0 4rem;">
+    <section class="about-hero">
       <div class="container">
-        <h1 class="section-title fade-in" style="color: white;">About Me</h1>
-        <p class="section-subtitle fade-in delay-1" style="color: rgba(255,255,255,0.9);" data-profile="aboutPageSubtitle">Professional Profile & Skills Overview</p>
+        <h1 class="section-title fade-in">About Me</h1>
+        <p class="section-subtitle fade-in delay-1" data-profile="aboutPageSubtitle">Professional Profile & Skills Overview</p>
       </div>
     </section>
 <br>
@@ -869,7 +889,7 @@
     </div>
   </footer>
 
-  <script src="dynamic-profile.js"></script>
+  <script src="dynamic-profile.js?v=studio-2"></script>
   <script>
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();

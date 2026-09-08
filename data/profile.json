@@ -10,7 +10,7 @@
   "freelance": "Available",
   "birthday": "27 May 1995",
   "degree": "Masters",
-  "age": "30",
+  "age": "31",
   "aboutPageSubtitle": "Professional Profile & Skills Overview",
   "contactPageSubtitle": "Get in touch for any services you may require at very affordable rates",
   "resumeProfile": "Innovative and deadline-driven Web Developer, Android Developer, Graphic Designer, and Video Editor with 3+ years of experience designing user-centered digital and print material.",
@@ -31,43 +31,190 @@
     "professionalProfileTitle": "Professional Profile",
     "educationTitle": "Education",
     "experienceTitle": "Experience",
-    "contactTitle": "Contact Me"
+    "contactTitle": "Contact Me",
+    "homeEyebrow": "TECHNOLOGY. CREATIVITY. PURPOSE.",
+    "homeExpertiseTitle": "A practical mind. A creative perspective.",
+    "homeWorkTitle": "Selected work",
+    "homeContactTitle": "Let's build something meaningful."
   },
   "skills": [
-    { "name": "HTML", "level": 100 }, { "name": "CSS", "level": 85 }, { "name": "JavaScript", "level": 70 },
-    { "name": "Java", "level": 90 }, { "name": "Kotlin", "level": 95 }, { "name": "PHP", "level": 68 },
-    { "name": "React/React Native", "level": 80 }, { "name": "Adobe Photoshop", "level": 95 }, { "name": "Adobe Premiere Pro", "level": 90 },
-    { "name": "FL Studio", "level": 80 }, { "name": "CapCut", "level": 95 }, { "name": "OBS LiveStreaming", "level": 90 }
+    {
+      "name": "HTML",
+      "level": 100
+    },
+    {
+      "name": "CSS",
+      "level": 85
+    },
+    {
+      "name": "JavaScript",
+      "level": 70
+    },
+    {
+      "name": "Java",
+      "level": 90
+    },
+    {
+      "name": "Kotlin",
+      "level": 95
+    },
+    {
+      "name": "PHP",
+      "level": 68
+    },
+    {
+      "name": "React/React Native",
+      "level": 80
+    },
+    {
+      "name": "Adobe Photoshop",
+      "level": 95
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "level": 90
+    },
+    {
+      "name": "FL Studio",
+      "level": 80
+    },
+    {
+      "name": "CapCut",
+      "level": 95
+    },
+    {
+      "name": "OBS LiveStreaming",
+      "level": 90
+    }
   ],
   "education": [
-    { "title": "Master of Science in Project Management & Planning", "date": "2023 - 2025", "organization": "Mount Kenya University", "description": "Project management for planning and management of ICT and non-ICT projects." },
-    { "title": "Bachelor of Business Information Technology", "date": "2015 - 2019", "organization": "Meru University of Science and Technology", "description": "Algorithms, networking, programming, databases, software engineering, web design, and systems analysis." },
-    { "title": "Networking and Cyber Security", "date": "2020 - 2021", "organization": "Huawei ICT Academy", "description": "Huawei ICT Associate studies in networking and cyber security." }
+    {
+      "title": "Master of Science in Project Management & Planning",
+      "date": "2023 - 2025",
+      "organization": "Mount Kenya University",
+      "description": "Project management for planning and management of ICT and non-ICT projects."
+    },
+    {
+      "title": "Bachelor of Business Information Technology",
+      "date": "2015 - 2019",
+      "organization": "Meru University of Science and Technology",
+      "description": "Algorithms, networking, programming, databases, software engineering, web design, and systems analysis."
+    },
+    {
+      "title": "Networking and Cyber Security",
+      "date": "2020 - 2021",
+      "organization": "Huawei ICT Academy",
+      "description": "Huawei ICT Associate studies in networking and cyber security."
+    }
   ],
   "experience": [
-    { "title": "Mental Health Technician/Worker", "date": "Jan 2026 - Present", "organization": "SRBHH, Santa Rosa, California", "items": ["Mental healthcare worker"] },
-    { "title": "Freelance ICT Technical Consultant", "date": "2023 - 2024", "organization": "Remote", "items": ["Designed and implemented graphic, layout, and communication materials", "Supervised design quality and accuracy", "Managed production project budgets"] },
-    { "title": "Presidential Digitalent Intern", "date": "Oct 2020 - Sept 2021", "organization": "ICT Authority", "items": ["Assisted implementation of county health information management systems"] },
-    { "title": "ICT Volunteer", "date": "Sept 2021 - Jan 2022", "organization": "Samburu County Referral Hospital", "items": ["System administration", "Server maintenance", "User support", "Network configuration and maintenance"] }
+    {
+      "title": "Mental Health Technician/Worker",
+      "date": "Jan 2026 - Present",
+      "organization": "SRBHH, Santa Rosa, California",
+      "items": [
+        "Mental healthcare worker"
+      ]
+    },
+    {
+      "title": "Freelance ICT Technical Consultant",
+      "date": "2023 - 2024",
+      "organization": "Remote",
+      "items": [
+        "Designed and implemented graphic, layout, and communication materials",
+        "Supervised design quality and accuracy",
+        "Managed production project budgets"
+      ]
+    },
+    {
+      "title": "Presidential Digitalent Intern",
+      "date": "Oct 2020 - Sept 2021",
+      "organization": "ICT Authority",
+      "items": [
+        "Assisted implementation of county health information management systems"
+      ]
+    },
+    {
+      "title": "ICT Volunteer",
+      "date": "Sept 2021 - Jan 2022",
+      "organization": "Samburu County Referral Hospital",
+      "items": [
+        "System administration",
+        "Server maintenance",
+        "User support",
+        "Network configuration and maintenance"
+      ]
+    }
   ],
   "facts": [
-    { "number": "123", "label": "Clients" }, { "number": "28", "label": "Projects" },
-    { "number": "1453", "label": "Hours Of Support" }, { "number": "5", "label": "Team Members" }
+    {
+      "number": "123",
+      "label": "Clients"
+    },
+    {
+      "number": "28",
+      "label": "Projects"
+    },
+    {
+      "number": "1453",
+      "label": "Hours Of Support"
+    },
+    {
+      "number": "5",
+      "label": "Team Members"
+    }
   ],
   "testimonials": [
-    { "name": "Rev. John Kamau", "role": "VWO-Karati - Reverend Pastor", "quote": "Peter is a very committed individual who serves us well as the head of our Church's media department. He is vastly knowledgeable in matters livestreaming and graphic design.", "image": "images/testimonials-2.png" },
-    { "name": "Mercy Kiragu", "role": "Trainee & Mentee", "quote": "Peter is really good at what he does. He is what I call very close to a computer genius.", "image": "images/testimonials-1.jpg" }
+    {
+      "name": "Rev. John Kamau",
+      "role": "VWO-Karati - Reverend Pastor",
+      "quote": "Peter is a very committed individual who serves us well as the head of our Church's media department. He is vastly knowledgeable in matters livestreaming and graphic design.",
+      "image": "images/testimonials-2.png"
+    },
+    {
+      "name": "Mercy Kiragu",
+      "role": "Trainee & Mentee",
+      "quote": "Peter is really good at what he does. He is what I call very close to a computer genius.",
+      "image": "images/testimonials-1.jpg"
+    }
   ],
   "footerText": "All rights reserved.",
   "services": [
-    { "title": "Project Management", "description": "I oversee projects from beginning to end, keeping tasks organized, on schedule, and focused on successful results.", "icon": "project" },
-    { "title": "Web and Android Development", "description": "I build practical, responsive web and mobile experiences for organizations and individuals.", "icon": "code" },
-    { "title": "Creative Production", "description": "Graphic design, video editing, social media management, writing, and music production support.", "icon": "creative" }
+    {
+      "title": "Project Management",
+      "description": "I oversee projects from beginning to end, keeping tasks organized, on schedule, and focused on successful results.",
+      "icon": "project"
+    },
+    {
+      "title": "Web and Android Development",
+      "description": "I build practical, responsive web and mobile experiences for organizations and individuals.",
+      "icon": "code"
+    },
+    {
+      "title": "Creative Production",
+      "description": "Graphic design, video editing, social media management, writing, and music production support.",
+      "icon": "creative"
+    }
   ],
   "projects": [
-    { "title": "E-Commerce App", "category": "android", "description": "A complete shopping solution with payment integration", "image": "images/a1.jpg" },
-    { "title": "Brand Identity", "category": "design", "description": "Complete branding package for a startup company", "image": "images/g1.jpg" },
-    { "title": "Corporate Website", "category": "web", "description": "Responsive website for a financial services company", "image": "images/w1.png" }
+    {
+      "title": "E-Commerce App",
+      "category": "android",
+      "description": "A complete shopping solution with payment integration",
+      "image": "images/a1.jpg"
+    },
+    {
+      "title": "Brand Identity",
+      "category": "design",
+      "description": "Complete branding package for a startup company",
+      "image": "images/g1.jpg"
+    },
+    {
+      "title": "Corporate Website",
+      "category": "web",
+      "description": "Responsive website for a financial services company",
+      "image": "images/w1.png"
+    }
   ],
   "social": {
     "facebook": "",

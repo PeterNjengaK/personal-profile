@@ -1,66 +1,82 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile Admin</title>
-  <link rel="stylesheet" href="admin.css">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Profile Studio | Peter Njenga</title>
+  <link rel="stylesheet" href="admin.css?v=studio-2">
 </head>
 <body>
+  <div class="admin-topbar">
+    <a class="admin-brand" href="../index.html"><img class="head-logo" src="../images/logo.png" alt="Peter Njenga" width="40" height="40"><span class="brand-label">PROFILE STUDIO</span></a>
+    <a class="back-link" href="../index.html">Back to website <span aria-hidden="true">&#8599;</span></a>
+  </div>
   <main class="shell">
-    <section class="auth-panel" id="auth-panel">
-      <p class="eyebrow">Profile CMS</p><h1>Your website, in one place.</h1>
-      <p class="lede">Sign in to manage every public page, collection, link, and piece of copy.</p>
-      <form id="login-form" class="stack">
-        <label>Admin password<input id="password" type="password" required autocomplete="current-password"></label>
-        <button type="submit">Sign in to dashboard</button>
-        <p id="login-status" class="status"></p>
-      </form>
+    <section class="auth-panel" id="auth-panel" aria-label="Admin sign in">
+      <div class="auth-story">
+        <p class="eyebrow">YOUR PERSONAL SPACE</p>
+        <div><h2>A little care.<br>A lasting impression.</h2><p>Keep your story, your work, and your next chapter up to date.</p></div>
+        <span class="story-note">Peter Njenga / Profile Studio</span>
+      </div>
+      <div class="auth-content">
+        <p class="eyebrow">WELCOME BACK</p><h1>Make it yours.</h1>
+        <p class="lede">Sign in to update your profile and give your latest work a place to shine.</p>
+        <form id="login-form" class="stack">
+          <label for="password">Admin password</label>
+          <div class="password-control"><input id="password" type="password" required autocomplete="current-password"><button type="button" class="password-toggle" id="password-toggle" aria-controls="password" aria-pressed="false">Show</button></div>
+          <button type="submit">Open your studio <span aria-hidden="true">&#8594;</span></button>
+          <p id="login-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="auth-note">A private space to manage your public presence.</p>
+      </div>
     </section>
-    <section class="dashboard hidden" id="dashboard">
+    <section class="dashboard hidden" id="dashboard" aria-label="Profile editor">
       <header class="dashboard-header">
-        <div><p class="eyebrow">Profile CMS / Control room</p><h1>Edit your website</h1><p class="lede">Changes are published to the public site when you save.</p></div>
-        <a class="site-link" href="../index.html" target="_blank" rel="noreferrer">View live site ↗</a>
+        <div><p class="eyebrow">YOUR WEBSITE / YOUR STORY</p><h1>Welcome to your studio.</h1><p class="lede">A few thoughtful updates can make all the difference.</p></div>
+        <div class="header-actions"><a class="site-link" href="../index.html" target="_blank" rel="noreferrer">View website &#8599;</a><button class="quiet-button" type="button" id="logout-button">Sign out</button></div>
       </header>
-      <form id="profile-form">
-        <nav class="tabs" aria-label="Content sections">
-          <button type="button" class="tab active" data-tab="identity">Identity</button>
-          <button type="button" class="tab" data-tab="pages">Page copy</button>
-          <button type="button" class="tab" data-tab="collections">Collections</button>
-          <button type="button" class="tab" data-tab="links">Links</button>
-          <button type="button" class="tab" data-tab="advanced">Advanced</button>
-        </nav>
-        <section class="tab-panel active" data-panel="identity">
-          <div class="section-heading"><div><p class="eyebrow">01 / Identity</p><h2>How people find you</h2></div><p>These fields appear across your home, about, resume, and contact pages.</p></div>
-          <div class="field-grid">
-            <label>Name<input name="name" required></label><label>Email<input name="email" type="email" required></label>
-            <label>Headline<textarea name="headline" rows="3" required></textarea></label><label>About intro<textarea name="aboutIntro" rows="3"></textarea></label>
-            <label>Bio<textarea name="bio" rows="4"></textarea></label><label>Resume profile<textarea name="resumeProfile" rows="4"></textarea></label>
-            <label>Phone<input name="phone"></label><label>Location<input name="location"></label>
-            <label>Website<input name="website" type="url"></label><label>Birthday<input name="birthday"></label>
-            <label>Age<input name="age"></label><label>Degree<input name="degree"></label><label>Freelance status<input name="freelance"></label>
+      <form id="profile-form" novalidate>
+        <div class="editor-layout">
+          <aside class="editor-sidebar">
+            <p class="eyebrow">WORKSPACE</p>
+            <nav class="tabs" aria-label="Content sections" role="tablist" aria-orientation="vertical">
+              <button type="button" class="tab active" data-tab="identity" id="tab-identity" role="tab" aria-selected="true" aria-controls="panel-identity"><span>01</span> Your profile</button>
+              <button type="button" class="tab" data-tab="pages" id="tab-pages" role="tab" aria-selected="false" aria-controls="panel-pages" tabindex="-1"><span>02</span> Page content</button>
+              <button type="button" class="tab" data-tab="collections" id="tab-collections" role="tab" aria-selected="false" aria-controls="panel-collections" tabindex="-1"><span>03</span> Work &amp; experience</button>
+              <button type="button" class="tab" data-tab="links" id="tab-links" role="tab" aria-selected="false" aria-controls="panel-links" tabindex="-1"><span>04</span> Social &amp; links</button>
+              <button type="button" class="tab" data-tab="advanced" id="tab-advanced" role="tab" aria-selected="false" aria-controls="panel-advanced" tabindex="-1"><span>05</span> Advanced</button>
+            </nav>
+            <div class="sidebar-profile"><span class="avatar" aria-hidden="true">PN</span><div><strong id="editor-name">Your profile</strong><small>Personal website</small></div></div>
+          </aside>
+          <div class="editor-main">
+            <div class="editor-summary" aria-label="Content overview"><span><strong id="project-count">0</strong> projects</span><span><strong id="service-count">0</strong> services</span><span><strong id="skill-count">0</strong> skills</span></div>
+            <section class="tab-panel active" data-panel="identity" id="panel-identity" role="tabpanel" aria-labelledby="tab-identity" tabindex="0">
+              <div class="section-heading"><p class="eyebrow">01 / THE INTRODUCTION</p><h2>Let people get to know you.</h2><p>Your name, your expertise, and the details that connect it all.</p></div>
+              <div class="field-grid"></div>
+            </section>
+            <section class="tab-panel" data-panel="pages" id="panel-pages" role="tabpanel" aria-labelledby="tab-pages" tabindex="0">
+              <div class="section-heading"><p class="eyebrow">02 / THE WORDS</p><h2>Your voice, on every page.</h2><p>Fine-tune the headings and descriptions throughout your website.</p></div>
+              <div class="field-grid" id="page-copy-fields"></div>
+            </section>
+            <section class="tab-panel" data-panel="collections" id="panel-collections" role="tabpanel" aria-labelledby="tab-collections" tabindex="0">
+              <div class="section-heading"><p class="eyebrow">03 / THE BODY OF WORK</p><h2>Show what you bring.</h2><p>Add, edit, and reorder your projects, services, skills, and experience.</p></div>
+              <div id="collection-editors"></div>
+            </section>
+            <section class="tab-panel" data-panel="links" id="panel-links" role="tabpanel" aria-labelledby="tab-links" tabindex="0">
+              <div class="section-heading"><p class="eyebrow">04 / STAY CONNECTED</p><h2>Make the next connection.</h2><p>Add your social profiles. Empty links stay hidden from visitors.</p></div>
+              <div class="field-grid" id="link-fields"></div>
+            </section>
+            <section class="tab-panel" data-panel="advanced" id="panel-advanced" role="tabpanel" aria-labelledby="tab-advanced" tabindex="0">
+              <div class="section-heading"><p class="eyebrow">05 / ADVANCED</p><h2>The complete picture.</h2><p>Edit the full profile JSON, including custom fields. Changes stay in sync with the visual editor.</p></div>
+              <label>Complete profile JSON<textarea id="raw-content" rows="28" spellcheck="false"></textarea></label>
+            </section>
+            <footer class="save-bar"><span id="save-status" class="status" role="status" aria-live="polite">You're up to date.</span><button type="submit" id="publish-button">Save &amp; publish <span aria-hidden="true">&#8599;</span></button></footer>
           </div>
-        </section>
-        <section class="tab-panel" data-panel="pages">
-          <div class="section-heading"><div><p class="eyebrow">02 / Page copy</p><h2>Headings and supporting text</h2></div><p>Rewrite section titles without opening the code.</p></div>
-          <div class="field-grid" id="page-copy-fields"></div>
-        </section>
-        <section class="tab-panel" data-panel="collections">
-          <div class="section-heading"><div><p class="eyebrow">03 / Collections</p><h2>Content that repeats</h2></div><p>Add, remove, reorder, and edit cards, skills, facts, education, experience, and testimonials.</p></div>
-          <div id="collection-editors"></div>
-        </section>
-        <section class="tab-panel" data-panel="links">
-          <div class="section-heading"><div><p class="eyebrow">04 / Links</p><h2>Contact and social presence</h2></div><p>Empty links stay hidden from visitors.</p></div>
-          <div class="field-grid" id="link-fields"></div>
-        </section>
-        <section class="tab-panel" data-panel="advanced">
-          <div class="section-heading"><div><p class="eyebrow">05 / Advanced</p><h2>Full document editor</h2></div><p>Use this for custom fields or content not covered by the visual editor.</p></div>
-          <label>Complete profile JSON<textarea id="raw-content" rows="28" spellcheck="false"></textarea></label>
-        </section>
-        <footer class="save-bar"><span id="save-status" class="status"></span><button type="submit">Save and publish changes</button></footer>
+        </div>
       </form>
     </section>
   </main>
-  <script src="admin.js?v=06348a5"></script>
+  <script src="admin.js?v=studio-2"></script>
 </body>
 </html>

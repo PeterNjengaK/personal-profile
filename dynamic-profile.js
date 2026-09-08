@@ -16,16 +16,16 @@ async function loadDynamicProfile() {
       if (profile[key]) element.href = profile[key];
     });
     document.querySelectorAll('[data-profile-email]').forEach((element) => {
-      element.textContent = profile.email;
-      element.href = `mailto:${profile.email}`;
+      element.textContent = profile.email || '';
+      element.href = `mailto:${profile.email || ''}`;
     });
     document.querySelectorAll('[data-profile-phone]').forEach((element) => {
-      element.textContent = profile.phone;
-      element.href = `tel:${profile.phone.replace(/[^+\d]/g, '')}`;
+      element.textContent = profile.phone || '';
+      element.href = `tel:${String(profile.phone || '').replace(/[^+\d]/g, '')}`;
     });
     document.querySelectorAll('.social-icons a[title]').forEach((element) => {
       const key = element.title.toLowerCase();
-      if (profile.social?.[key]) element.href = profile.social[key];
+      element.href = profile.social?.[key] || '#';
     });
     renderServices(profile.services || []);
     renderProjects(profile.projects || []);
@@ -41,7 +41,7 @@ async function loadDynamicProfile() {
 
 function renderTestimonials(testimonials) {
   const container = document.querySelector('[data-dynamic-testimonials]');
-  if (!container || !testimonials.length) return;
+  if (!container) return;
   container.replaceChildren(...testimonials.map((testimonial) => {
     const card = document.createElement('div');
     card.className = 'testimonial';
@@ -53,14 +53,16 @@ function renderTestimonials(testimonials) {
     author.className = 'testimonial-author'; author.textContent = testimonial.name;
     const role = document.createElement('div');
     role.className = 'testimonial-role'; role.textContent = testimonial.role;
-    card.append(image, quote, author, role);
+    image.loading = 'lazy';
+    if (testimonial.image) card.append(image);
+    card.append(quote, author, role);
     return card;
   }));
 }
 
 function renderSkills(skills) {
   const container = document.querySelector('[data-dynamic-skills]');
-  if (!container || !skills.length) return;
+  if (!container) return;
   const columns = [document.createElement('div'), document.createElement('div')];
   skills.forEach((skill, index) => {
     const item = document.createElement('div');
@@ -86,7 +88,7 @@ function renderSkills(skills) {
 
 function renderFacts(facts) {
   const container = document.querySelector('[data-dynamic-facts]');
-  if (!container || !facts.length) return;
+  if (!container) return;
   container.replaceChildren(...facts.map((fact) => {
     const box = document.createElement('div');
     box.className = 'fact-box fade-in';
@@ -103,17 +105,13 @@ function renderFacts(facts) {
 
 function renderEducation(education) {
   const container = document.querySelector('[data-dynamic-education]');
-  if (!container || !education.length) return;
-  const heading = container.querySelector('h3') || document.createElement('h3');
-  heading.textContent = 'Education';
-  container.replaceChildren(heading, ...education.map((item) => renderResumeItem(item)));
+  if (!container) return;
+  container.replaceChildren(...education.map((item) => renderResumeItem(item)));
 }
 
 function renderExperience(experience) {
   const container = document.querySelector('[data-dynamic-experience]');
-  if (!container || !experience.length) return;
-  const heading = container.parentElement.querySelector('.section-title');
-  if (heading) heading.textContent = 'Experience';
+  if (!container) return;
   container.replaceChildren(...experience.map((item) => renderResumeItem(item)));
 }
 
@@ -147,13 +145,22 @@ function renderResumeItem(item) {
 
 function renderServices(services) {
   const container = document.querySelector('[data-dynamic-services]');
-  if (!container || !services.length) return;
+  if (!container) return;
   container.replaceChildren(...services.map((service) => {
     const card = document.createElement('div');
     card.className = 'services-card fade-in';
     const icon = document.createElement('div');
     icon.className = 'service-icon';
-    icon.textContent = service.icon || '*';
+    const symbols = {
+      project: '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M9 3v4m6-4v4M8 12h8m-8 4h5"/>',
+      code: '<path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/>',
+      creative: '<path d="m16 3 5 5-11 11-7 2 2-7L16 3ZM13 6l5 5M5 14l5 5"/>'
+    };
+    if (symbols[service.icon]) {
+      icon.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[service.icon]}</svg>`;
+    } else {
+      icon.textContent = service.icon || '\u2727';
+    }
     const title = document.createElement('h3');
     title.textContent = service.title;
     const description = document.createElement('p');
@@ -165,8 +172,9 @@ function renderServices(services) {
 
 function renderProjects(projects) {
   const container = document.querySelector('[data-dynamic-projects]');
-  if (!container || !projects.length) return;
-  container.replaceChildren(...projects.map((project) => {
+  if (!container) return;
+  const visibleProjects = document.body.classList.contains('home-page') ? projects.slice(0, 3) : projects;
+  container.replaceChildren(...visibleProjects.map((project) => {
     const item = document.createElement('div');
     item.className = 'portfolio-item fade-in';
     item.dataset.category = project.category;
@@ -174,6 +182,7 @@ function renderProjects(projects) {
     image.className = 'portfolio-img';
     image.src = project.image;
     image.alt = project.title;
+    image.loading = 'lazy';
     const overlay = document.createElement('div');
     overlay.className = 'portfolio-overlay';
     const category = document.createElement('span');
@@ -187,6 +196,7 @@ function renderProjects(projects) {
     item.append(image, overlay);
     return item;
   }));
+  document.querySelector('.filter-btn.active')?.click();
 }
 
 loadDynamicProfile();

@@ -18,3 +18,16 @@ Without `MONGODB_URI`, changes are saved to `data/profile.json`. For production,
 5. Open the generated Render URL and add `/admin/` to manage the profile.
 
 The local JSON fallback is useful for development. Use MongoDB in production because hosted filesystems are not durable.
+
+## Profile Studio
+
+Open `/admin/` and sign in with the `ADMIN_PASSWORD` configured for that environment.
+The studio includes profile fields, page headings, portfolio and experience collections,
+social links, and an Advanced JSON editor. Use the arrow controls to reorder collection
+items. Changes appear on the public pages only after **Save & publish** succeeds.
+Advanced edits and visual fields stay in sync, and custom fields are preserved.
+
+The public pages and studio share a plum, copper, and ivory palette. Public styling is
+in `profile.css`; the studio uses `admin/admin.css`. The site still runs with `npm start`
+and the existing Render blueprint. Local `.env` values and `.local-preview/` browser
+checks are ignored by Git and should not be included in deployment uploads.

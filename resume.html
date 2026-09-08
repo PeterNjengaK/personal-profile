@@ -446,6 +446,24 @@
         font-size: 1.8rem;
       }
 
+
+    @media (max-width: 390px) {
+      body { overflow-x: hidden; }
+      .container { padding: 0 1rem; }
+      header { padding: 0.75rem 0; }
+      .logo { height: 2rem; }
+      nav { top: 4rem; }
+      .resume-hero { padding: 6rem 0 3rem; }
+      .section-title { font-size: 1.65rem; }
+      .section-subtitle { font-size: 0.95rem; }
+      .resume-summary, .resume-card { padding: 1.25rem; }
+      .resume-grid { grid-template-columns: 1fr; }
+      .summary-info { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+      .info-box { min-width: 0; }
+      .resume-item { padding-left: 1.25rem; }
+      .resume-item h4 { font-size: 1.05rem; }
+      .social-icons { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    }
       .resume-summary {
         padding: 1.5rem;
       }
@@ -483,16 +501,17 @@
       animation-delay: 0.6s;
     }
   </style>
+  <link rel="stylesheet" href="profile.css?v=studio-2">
+  <script src="profile-ui.js?v=studio-2" defer></script>
 </head>
-<body>
+<body class="inner-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header>
     <div class="container header-container">
-      <div>
-        <img src="images/logo.png" alt="Peter Njenga Logo" class="logo">
-      </div>
+      <a class="wordmark" href="index.html" aria-label="Peter Njenga home"><img class="head-logo" src="images/logo.png" alt="Peter Njenga" width="40" height="40"><span class="wordmark-caption">PERSONAL PROFILE</span></a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="main-nav" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -511,7 +530,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Resume Hero Section -->
     <section class="resume-hero">
       <div class="container">
@@ -727,7 +746,7 @@
     </div>
   </footer>
 
-  <script src="dynamic-profile.js"></script>
+  <script src="dynamic-profile.js?v=studio-2"></script>
   <script>
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
