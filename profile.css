@@ -135,7 +135,8 @@ footer .social-icons a { color: #ead2c2; }
 .project-cover span { font-family: Georgia, serif; font-size: 32px; line-height: 1.2; letter-spacing: 0; }
 .project-stack { margin: 16px 0; font-weight: 600; }
 .portfolio-overlay .text-link { margin-top: 18px; }
-.wordmark .head-logo { display: block; width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+.wordmark .head-logo { display: block; width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; }
+@media (max-width: 600px) { .wordmark .head-logo { width: 48px; height: 48px; } }
 
 /* Tools and capabilities: compact cards with distinct creative accents. */
 .floating-text-me { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 1000; display: inline-flex; align-items: center; gap: 11px; min-height: 56px; padding: 14px 23px; border: 1px solid #f3d4bf; border-radius: 999px; background: #e2b497; color: #352939; font-family: 'Poppins', Arial, sans-serif; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 30px #382d3a38; transition: transform .2s, box-shadow .2s, background .2s; }
