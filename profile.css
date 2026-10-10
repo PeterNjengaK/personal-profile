@@ -123,7 +123,14 @@ footer .social-icons a { color: #ead2c2; }
 
 /* Original personal head logo. */
 .portrait-golden-gate { background: #382d3a; }
-.portrait-golden-gate > img { width: 58%; margin-left: auto; object-position: 55% 64%; filter: saturate(.85); }
+.portrait-golden-gate > img {
+  width: 58%;
+  margin-left: auto;
+  object-position: 55% 64%;
+  filter: saturate(.85);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 38%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 38%);
+}
 @media (max-width: 900px) {
   .portrait-golden-gate > img { width: 68%; object-position: 55% 64%; }
 }
