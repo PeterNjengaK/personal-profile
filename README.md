@@ -1,5 +1,9 @@
 # Dynamic personal profile
 
+## GitHub Pages
+
+The public site works on GitHub Pages using `data/profile.json` when the Node API is unavailable. GitHub Pages cannot run the admin editor. Edit locally, then commit and publish the updated public data. Publish only public HTML, styles, scripts, images, and profile JSON; exclude server code and credentials.
+
 ## Run locally
 
 1. Install Node.js 20 or newer.

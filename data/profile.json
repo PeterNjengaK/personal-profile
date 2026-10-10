@@ -23,7 +23,7 @@
     "testimonialsTitle": "Client Testimonials",
     "testimonialsSubtitle": "What my clients say about my work",
     "portfolioTitle": "My Portfolio",
-    "portfolioSubtitle": "A showcase of my work and projects",
+    "portfolioSubtitle": "Systems I have developed, with features and source code from my GitHub repositories.",
     "resumeTitle": "My Resume",
     "resumeSubtitle": "Professional Experience & Education",
     "servicesTitle": "My Services",
@@ -185,28 +185,82 @@
   ],
   "projects": [
     {
-      "title": "E-Commerce App",
-      "category": "android",
-      "description": "A complete shopping solution with payment integration",
-      "image": "images/a1.jpg"
-    },
-    {
-      "title": "Brand Identity",
-      "category": "design",
-      "description": "Complete branding package for a startup company",
-      "image": "images/g1.jpg"
-    },
-    {
-      "title": "Corporate Website",
+      "title": "Carepoint Hospital IMS",
       "category": "web",
-      "description": "Responsive website for a financial services company",
-      "image": "images/w1.png"
+      "description": "A hospital management system with shared browser and Electron interfaces. Implements staff roles, patient registration, appointments, clinical encounters, lab and pharmacy orders, billing, and inpatient bed allocation. Production release and cross-site data exchange remain in development.",
+      "technologies": "JavaScript · Node.js · SQLite · Electron",
+      "url": "https://github.com/PeterNjengaK/Hospital-IMS",
+      "image": "images/projects/Hospital-IMS.svg",
+      "imageAlt": "Carepoint Hospital IMS — illustrated project preview"
+    },
+    {
+      "title": "CleanConnect",
+      "category": "web",
+      "description": "A two-sided cleaning marketplace with customer and cleaner accounts, service profiles, job postings, competitive offers, hiring, job messages, and reviews. Includes Stripe Checkout and Connect integration; live payments require production configuration.",
+      "technologies": "JavaScript · React · Node.js · MongoDB · Stripe",
+      "url": "https://github.com/PeterNjengaK/CleanConnect",
+      "image": "images/projects/CleanConnect.svg",
+      "imageAlt": "CleanConnect — illustrated project preview"
+    },
+    {
+      "title": "Edwin’s Auto Hub",
+      "category": "web",
+      "description": "A dealership and multi-category catalogue for cars, parts, land, and houses. Includes search, saved listings, enquiries, seller submissions, inventory management, customer follow-ups, viewing schedules, and sales reports.",
+      "technologies": "JavaScript · Node.js · Express · SQLite",
+      "url": "https://github.com/PeterNjengaK/edwins-auto-hub",
+      "image": "images/projects/edwins-auto-hub.svg",
+      "imageAlt": "Edwin’s Auto Hub — illustrated project preview"
+    },
+    {
+      "title": "Church Member Registration",
+      "category": "desktop",
+      "description": "A desktop member registration system with authentication, photo uploads, search and filtering, dashboard charts, backups, session timeouts, and Excel and PDF exports.",
+      "technologies": "Python · Tkinter · Electron · OpenPyXL · ReportLab",
+      "url": "https://github.com/PeterNjengaK/ChurchMemberRegistration",
+      "image": "images/projects/ChurchMemberRegistration.svg",
+      "imageAlt": "Church Member Registration — illustrated project preview"
+    },
+    {
+      "title": "Personal Profile & Portfolio",
+      "category": "web",
+      "description": "This responsive portfolio presents my background, services, and projects. The Node version includes a protected profile editor and supports MongoDB or local JSON storage; the public GitHub Pages version uses the saved profile data.",
+      "technologies": "HTML · CSS · JavaScript · Express · MongoDB",
+      "url": "https://github.com/PeterNjengaK/personal-profile",
+      "image": "images/projects/personal-profile.svg",
+      "imageAlt": "Personal Profile & Portfolio — illustrated project preview"
+    },
+    {
+      "title": "VWO Karati Church System",
+      "category": "web",
+      "description": "A public church website and shared office portal with a Windows desktop launcher. Includes member registration, attendance, care tasks, reports, staff permissions, website publishing, and administrator backups.",
+      "technologies": "JavaScript · Node.js · SQLite · Windows desktop",
+      "url": "https://github.com/PeterNjengaK/vwo-karati",
+      "image": "images/projects/vwo-karati.svg",
+      "imageAlt": "VWO Karati Church System — illustrated project preview"
+    },
+    {
+      "title": "Kabo Crochet Storefront",
+      "category": "web",
+      "description": "A crochet storefront and studio dashboard with search, product galleries, a stock-aware cart, customer accounts, order history, discounts, inventory management, and order tracking. Checkout creates demo orders; payments are not connected.",
+      "technologies": "HTML · CSS · JavaScript · Node.js · SQLite",
+      "url": "https://github.com/PeterNjengaK/Kabo",
+      "image": "images/projects/Kabo.svg",
+      "imageAlt": "Kabo Crochet Storefront — illustrated project preview"
+    },
+    {
+      "title": "Status Gallery",
+      "category": "android",
+      "description": "An Android gallery for locally available WhatsApp status photos and videos. Includes filters, full-screen viewing, saving copies, multi-selection, and manual person groups. Uses Android folder permissions without network access; currently a sideloaded prototype.",
+      "technologies": "Java · Android SDK · Storage Access Framework",
+      "url": "https://github.com/PeterNjengaK/status-gallery",
+      "image": "images/projects/status-gallery.svg",
+      "imageAlt": "Status Gallery — illustrated project preview"
     }
   ],
   "social": {
     "facebook": "",
     "instagram": "",
     "linkedin": "",
-    "github": ""
+    "github": "https://github.com/PeterNjengaK"
   }
 }

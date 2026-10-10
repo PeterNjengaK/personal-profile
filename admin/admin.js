@@ -31,7 +31,7 @@ const pageFields = {
 const pageDefaults = { homeEyebrow: 'TECHNOLOGY. CREATIVITY. PURPOSE.', homeExpertiseTitle: 'A practical mind. A creative perspective.', homeWorkTitle: 'Selected work', homeContactTitle: "Let's build something meaningful." };
 const collections = {
   services: { title: 'Services', singular: 'Service', fields: [['title', 'Title'], ['description', 'Description', true], ['icon', 'Icon (project, code, creative, or a symbol)']] },
-  projects: { title: 'Portfolio projects', singular: 'Project', fields: [['title', 'Title'], ['category', 'Category (android, design, or web)'], ['description', 'Description', true], ['image', 'Image path or URL']] },
+  projects: { title: 'Portfolio projects', singular: 'Project', fields: [['title', 'Title'], ['category', 'Category (android, desktop, design, or web)'], ['description', 'Description', true], ['technologies', 'Technologies'], ['url', 'GitHub source URL'], ['image', 'Image path or URL'], ['imageAlt', 'Image description']] },
   skills: { title: 'Skills', singular: 'Skill', fields: [['name', 'Skill name'], ['level', 'Level (0-100)']] },
   education: { title: 'Education', singular: 'Qualification', fields: [['title', 'Qualification'], ['date', 'Dates'], ['organization', 'Institution'], ['description', 'Description', true]] },
   experience: { title: 'Experience', singular: 'Role', fields: [['title', 'Role'], ['date', 'Dates'], ['organization', 'Organization'], ['items', 'Responsibilities (one per line)', true]] },

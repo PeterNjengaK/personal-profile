@@ -1,7 +1,11 @@
 async function loadDynamicProfile() {
   try {
-    const response = await fetch('/api/profile');
-    if (!response.ok) return;
+    let response;
+    if (!location.hostname.endsWith('github.io')) {
+      try { response = await fetch('/api/profile'); } catch { /* Use saved public data. */ }
+    }
+    if (!response?.ok) response = await fetch('data/profile.json');
+    if (!response.ok) throw new Error('Could not load profile');
     const profile = await response.json();
     document.querySelectorAll('[data-profile]').forEach((element) => {
       const key = element.dataset.profile;
@@ -180,8 +184,8 @@ function renderProjects(projects) {
     item.dataset.category = project.category;
     const image = document.createElement('img');
     image.className = 'portfolio-img';
-    image.src = project.image;
-    image.alt = project.title;
+    image.src = project.image || 'images/logo.png';
+    image.alt = project.imageAlt || project.title;
     image.loading = 'lazy';
     const overlay = document.createElement('div');
     overlay.className = 'portfolio-overlay';
@@ -193,7 +197,32 @@ function renderProjects(projects) {
     const description = document.createElement('p');
     description.textContent = project.description;
     overlay.append(category, title, description);
-    item.append(image, overlay);
+    if (project.technologies) {
+      const stack = document.createElement('p');
+      stack.className = 'project-stack';
+      stack.textContent = project.technologies;
+      overlay.append(stack);
+    }
+    if (/^https:\/\/github\.com\//.test(project.url || '')) {
+      const link = document.createElement('a');
+      link.href = project.url;
+      link.className = 'text-link';
+      link.textContent = 'View source on GitHub ↗';
+      overlay.append(link);
+    }
+    if (project.image) {
+      item.append(image);
+    } else {
+      const cover = document.createElement('div');
+      cover.className = 'project-cover';
+      cover.setAttribute('aria-hidden', 'true');
+      cover.textContent = project.category === 'desktop' ? 'DESKTOP SYSTEM' : 'WEB SYSTEM';
+      const name = document.createElement('span');
+      name.textContent = project.title;
+      cover.append(name);
+      item.append(cover);
+    }
+    item.append(overlay);
     return item;
   }));
   document.querySelector('.filter-btn.active')?.click();

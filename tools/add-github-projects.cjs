@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const profile = JSON.parse(fs.readFileSync('data/profile.json', 'utf8'));
+const additional = [
+  { title: 'Carepoint Hospital IMS', category: 'web', description: 'A hospital management system with shared browser and Electron interfaces. Implements staff roles, patient registration, appointments, clinical encounters, lab and pharmacy orders, billing, and inpatient bed allocation. Production release and cross-site data exchange remain in development.', technologies: 'JavaScript · Node.js · SQLite · Electron', url: 'https://github.com/PeterNjengaK/Hospital-IMS' },
+  { title: 'CleanConnect', category: 'web', description: 'A two-sided cleaning marketplace with customer and cleaner accounts, service profiles, job postings, competitive offers, hiring, job messages, and reviews. Includes Stripe Checkout and Connect integration; live payments require production configuration.', technologies: 'JavaScript · React · Node.js · MongoDB · Stripe', url: 'https://github.com/PeterNjengaK/CleanConnect' },
+  { title: 'VWO Karati Church System', category: 'web', description: 'A public church website and shared office portal with a Windows desktop launcher. Includes member registration, attendance, care tasks, reports, staff permissions, website publishing, and administrator backups.', technologies: 'JavaScript · Node.js · SQLite · Windows desktop', url: 'https://github.com/PeterNjengaK/vwo-karati' },
+  { title: 'Kabo Crochet Storefront', category: 'web', description: 'A crochet storefront and studio dashboard with search, product galleries, a stock-aware cart, customer accounts, order history, discounts, inventory management, and order tracking. Checkout creates demo orders; payments are not connected.', technologies: 'HTML · CSS · JavaScript · Node.js · SQLite', url: 'https://github.com/PeterNjengaK/Kabo' },
+  { title: 'Status Gallery', category: 'android', description: 'An Android gallery for locally available WhatsApp status photos and videos. Includes filters, full-screen viewing, saving copies, multi-selection, and manual person groups. Uses Android folder permissions without network access; currently a sideloaded prototype.', technologies: 'Java · Android SDK · Storage Access Framework', url: 'https://github.com/PeterNjengaK/status-gallery' }
+];
+profile.projects = [...additional.slice(0, 2), ...profile.projects.filter(p => !additional.some(a => a.url === p.url)), ...additional.slice(2)];
+fs.writeFileSync('data/profile.json', JSON.stringify(profile, null, 2) + '\n');
+let portfolio = fs.readFileSync('portfolio.html', 'utf8');
+if (!portfolio.includes('data-filter="android"')) portfolio = portfolio.replace('<button class="filter-btn" data-filter="desktop">', '<button class="filter-btn" data-filter="android">Android Apps</button>\n        <button class="filter-btn" data-filter="desktop">');
+fs.writeFileSync('portfolio.html', portfolio);
