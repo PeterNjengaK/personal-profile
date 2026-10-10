@@ -142,6 +142,7 @@ footer .social-icons a { color: #ead2c2; }
 .floating-text-me svg { width: 24px; height: 24px; flex: none; }
 .floating-text-me:hover { transform: translateY(-3px); background: #f0c9ae; color: #352939; box-shadow: 0 12px 34px #382d3a45; }
 .floating-text-me:focus-visible { outline: 3px solid #806282; outline-offset: 4px; }
+#send-message { scroll-margin-top: 120px; }
 body:has(.floating-text-me) footer { padding-bottom: 100px; }
 @media (max-width: 600px) { .floating-text-me { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); min-height: 50px; padding: 12px 18px; font-size: 13px; } }
 @media (prefers-reduced-motion: reduce) { .floating-text-me { transition: none; } }
