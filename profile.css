@@ -136,3 +136,28 @@ footer .social-icons a { color: #ead2c2; }
 .project-stack { margin: 16px 0; font-weight: 600; }
 .portfolio-overlay .text-link { margin-top: 18px; }
 .wordmark .head-logo { display: block; width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+
+/* Tools and capabilities: compact cards with distinct creative accents. */
+.skills-container { padding: 40px; background: linear-gradient(145deg, #fffcf8, #f3edf2); }
+.skills-container .section-subtitle { max-width: 600px; margin: 14px auto 34px; }
+.skills-grid.capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.capability-card { min-width: 0; padding: 24px; background: #fffcf8; border: 1px solid #e4d9e1; border-radius: 14px; box-shadow: 0 5px 18px #382d3a06; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.capability-card:hover { transform: translateY(-4px); border-color: #b49aae; box-shadow: 0 12px 25px #382d3a0e; }
+.capability-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+.capability-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: #eee4ef; color: #684c6d; }
+.capability-icon svg { width: 24px; height: 24px; }
+.capability-number { font-size: 11px; letter-spacing: 2px; color: #a393a0; }
+.capability-label { margin: 0 0 9px; font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #8c7187; }
+.capability-card h3 { font-size: 17px; line-height: 1.45; font-weight: 600; margin: 0; color: #382d3a; }
+.capability-tags { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 18px 0 0; }
+.capability-tags li { padding: 5px 9px; border: 1px solid #e6dce3; border-radius: 6px; background: #f7f1f5; color: #69566a; font-size: 10px; line-height: 1.5; }
+.capability-card[data-kind="creative"] .capability-icon { background: #f4e5d9; color: #95694c; }
+.capability-card[data-kind="creative"] .capability-label { color: #95694c; }
+.capability-card[data-kind="systems"] .capability-icon { background: #e8ece2; color: #677750; }
+.capability-card[data-kind="systems"] .capability-label { color: #677750; }
+@media (max-width: 1000px) { .skills-grid.capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .skills-container { padding: 24px 18px; }
+  .skills-grid.capability-grid { grid-template-columns: 1fr; gap: 12px; }
+  .capability-card { padding: 22px; }
+}
