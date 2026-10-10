@@ -122,24 +122,14 @@ footer .social-icons a { color: #ead2c2; }
 }
 
 /* Original personal head logo. */
-.portrait-golden-gate { background: #382d3a; }
-.portrait-golden-gate > img {
-  width: 58%;
-  margin-left: auto;
-  object-position: 55% 64%;
-  filter: saturate(.85);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 12%, #0000000a 22%, #00000038 34%, #00000080 44%, #000000d9 56%, #000 68%);
-  mask-image: linear-gradient(to right, transparent 0%, transparent 12%, #0000000a 22%, #00000038 34%, #00000080 44%, #000000d9 56%, #000 68%);
-}
-.portrait-golden-gate::after {
-  background: linear-gradient(90deg, #382d3a 0%, #382d3a 45%, #382d3af5 53%, #382d3ab3 63%, #382d3a33 76%, #382d3a0a 88%);
-}
-@media (max-width: 900px) {
-  .portrait-golden-gate > img { width: 68%; object-position: 55% 64%; }
-}
+.portrait-edited { background: #382d3a; }
+.portrait-edited > img { width: 100%; margin: 0; object-fit: cover; object-position: center; filter: none; }
+.portrait-edited::after { background: linear-gradient(90deg, #382d3a66 0%, #382d3a33 45%, transparent 70%); }
 @media (max-width: 768px) {
-  .portrait-golden-gate > img { width: 85%; object-position: 55% 60%; }
-  .portrait-golden-gate::after { background: linear-gradient(90deg, #382d3a 0%, #382d3aeb 30%, #382d3ab3 55%, #382d3a66 80%); }
+  .home-page .profile-hero { display: flex; flex-direction: column; gap: 24px; min-height: 0; padding-bottom: 0; }
+  .portrait-edited { position: relative; inset: auto; width: calc(100% + 44px); height: 310px; flex: none; }
+  .portrait-edited > img { object-position: right center; }
+  .portrait-edited::after { background: linear-gradient(180deg, #382d3a 0%, transparent 28%); }
 }
 .project-cover { min-height: 230px; padding: 32px; background: linear-gradient(135deg, #382d3a, #806282); color: #f7eee5; font-size: 11px; letter-spacing: 2px; display: flex; flex-direction: column; justify-content: space-between; }
 .project-cover span { font-family: Georgia, serif; font-size: 32px; line-height: 1.2; letter-spacing: 0; }

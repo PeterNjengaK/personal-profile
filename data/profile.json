@@ -1,8 +1,8 @@
 {
   "name": "Peter Njenga Kihoro",
   "headline": "Computer Programmer, Project Management Specialist, ICT Support Specialist, and Creative Professional",
-  "aboutIntro": "Project manager, Web Developer, Graphic Designer, Video Editor, Music Producer, Social Media Manager, Writer and Android Developer.",
-  "bio": "I provide professional computing services and aim to grow into a team-oriented, world-class ICT specialist.",
+  "aboutIntro": "I am Peter Njenga Kihoro, a software developer, project management specialist, and creative professional based in California. I build web, desktop, and Android applications that turn everyday workflows into practical tools for businesses and communities.",
+  "bio": "My work spans hospital workflows, church administration, cleaning marketplaces, retail storefronts, and dealership systems. I bring together application development, database design, ICT support, and project planning, alongside graphic design, video editing, and music production.",
   "email": "peter.njengakihoro@gmail.com",
   "phone": "+1 (707) 978 6179",
   "location": "California, USA",
@@ -11,13 +11,13 @@
   "birthday": "27 May 1995",
   "degree": "Masters",
   "age": "31",
-  "aboutPageSubtitle": "Professional Profile & Skills Overview",
+  "aboutPageSubtitle": "Software development, project planning, ICT support, and creative work.",
   "contactPageSubtitle": "Get in touch for any services you may require at very affordable rates",
   "resumeProfile": "Innovative and deadline-driven Web Developer, Android Developer, Graphic Designer, and Video Editor with 3+ years of experience designing user-centered digital and print material.",
   "pageCopy": {
-    "aboutAcademicIntro": "My academic qualifications are as highlighted below:",
+    "aboutAcademicIntro": "I hold a Master of Science in Project Management & Planning and a Bachelor of Business Information Technology, complemented by studies in networking and cyber security. This background helps me connect technical implementation with real operational needs.",
     "skillsTitle": "My Skills",
-    "skillsSubtitle": "Below are my skillset areas",
+    "skillsSubtitle": "Tools and capabilities I use across software, systems, and creative projects.",
     "factsTitle": "Professional Facts",
     "factsSubtitle": "My engagement levels and achievements",
     "testimonialsTitle": "Client Testimonials",
@@ -27,7 +27,7 @@
     "resumeTitle": "My Resume",
     "resumeSubtitle": "Professional Experience & Education",
     "servicesTitle": "My Services",
-    "servicesSubtitle": "Professional Services I Offer",
+    "servicesSubtitle": "Practical websites, applications, business systems, and creative support tailored to your workflow.",
     "professionalProfileTitle": "Professional Profile",
     "educationTitle": "Education",
     "experienceTitle": "Experience",
@@ -39,52 +39,40 @@
   },
   "skills": [
     {
-      "name": "HTML",
-      "level": 100
+      "name": "Web: HTML, CSS, JavaScript & React"
     },
     {
-      "name": "CSS",
-      "level": 85
+      "name": "Backend: Node.js & Express"
     },
     {
-      "name": "JavaScript",
-      "level": 70
+      "name": "Databases: SQLite & MongoDB"
     },
     {
-      "name": "Java",
-      "level": 90
+      "name": "Android: Java & Kotlin"
     },
     {
-      "name": "Kotlin",
-      "level": 95
+      "name": "Desktop: Python, Tkinter & Electron"
     },
     {
-      "name": "PHP",
-      "level": 68
+      "name": "APIs, authentication & role-based access"
     },
     {
-      "name": "React/React Native",
-      "level": 80
+      "name": "Project planning & documentation"
     },
     {
-      "name": "Adobe Photoshop",
-      "level": 95
+      "name": "ICT support & network administration"
     },
     {
-      "name": "Adobe Premiere Pro",
-      "level": 90
+      "name": "Design: Adobe Photoshop"
     },
     {
-      "name": "FL Studio",
-      "level": 80
+      "name": "Video: Premiere Pro & CapCut"
     },
     {
-      "name": "CapCut",
-      "level": 95
+      "name": "Streaming: OBS"
     },
     {
-      "name": "OBS LiveStreaming",
-      "level": 90
+      "name": "Music production: FL Studio"
     }
   ],
   "education": [
@@ -168,19 +156,44 @@
   "footerText": "All rights reserved.",
   "services": [
     {
-      "title": "Project Management",
-      "description": "I oversee projects from beginning to end, keeping tasks organized, on schedule, and focused on successful results.",
-      "icon": "project"
+      "title": "Web Applications & Websites",
+      "icon": "code",
+      "description": "Responsive websites, storefronts, customer portals, and marketplaces using HTML, CSS, JavaScript, React, and Node.js. My projects include Kabo, CleanConnect, and Edwin’s Auto Hub."
     },
     {
-      "title": "Web and Android Development",
-      "description": "I build practical, responsive web and mobile experiences for organizations and individuals.",
-      "icon": "code"
+      "title": "Business & Community Systems",
+      "icon": "project",
+      "description": "Custom tools for registration, inventory, appointments, reporting, and administration. I build shared workflows, role-based access, and database-backed dashboards, as demonstrated by Carepoint Hospital IMS and VWO Karati."
     },
     {
-      "title": "Creative Production",
-      "description": "Graphic design, video editing, social media management, writing, and music production support.",
-      "icon": "creative"
+      "title": "Android & Desktop Applications",
+      "icon": "code",
+      "description": "Android applications with Java and Kotlin, and desktop tools using Python/Tkinter and Electron. Examples include Status Gallery and Church Member Registration, with local file handling, search, and data exports."
+    },
+    {
+      "title": "Database & Backend Development",
+      "icon": "code",
+      "description": "Node.js APIs and SQLite or MongoDB data storage, with authentication, validation, permissions, and reporting. I connect public interfaces and staff dashboards to a shared source of data."
+    },
+    {
+      "title": "Project Planning & Coordination",
+      "icon": "project",
+      "description": "Requirements gathering, scope definition, task planning, documentation, and delivery coordination, informed by my postgraduate training in Project Management & Planning."
+    },
+    {
+      "title": "ICT Support & System Administration",
+      "icon": "project",
+      "description": "Technical troubleshooting, user support, server maintenance, and network configuration, drawing on my experience supporting ICT systems in a hospital environment."
+    },
+    {
+      "title": "Graphic Design & Video Editing",
+      "icon": "creative",
+      "description": "Brand graphics, marketing materials, and edited video content using Photoshop, Premiere Pro, and CapCut. I also support OBS-based streaming and content preparation."
+    },
+    {
+      "title": "Music & Digital Content",
+      "icon": "creative",
+      "description": "Instrumental and theme music production in FL Studio, plus writing and social media content support for individuals, businesses, and community organizations."
     }
   ],
   "projects": [

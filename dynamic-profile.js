@@ -76,6 +76,12 @@ function renderSkills(skills) {
     const label = document.createElement('span');
     label.textContent = skill.name;
     const level = document.createElement('span');
+    if (skill.level === undefined) {
+      name.append(label);
+      item.append(name);
+      columns[index < Math.ceil(skills.length / 2) ? 0 : 1].append(item);
+      return;
+    }
     level.textContent = `${skill.level}%`;
     name.append(label, level);
     const bar = document.createElement('div');
@@ -150,7 +156,8 @@ function renderResumeItem(item) {
 function renderServices(services) {
   const container = document.querySelector('[data-dynamic-services]');
   if (!container) return;
-  container.replaceChildren(...services.map((service) => {
+  const visibleServices = document.body.classList.contains('home-page') ? services.slice(0, 3) : services;
+  container.replaceChildren(...visibleServices.map((service) => {
     const card = document.createElement('div');
     card.className = 'services-card fade-in';
     const icon = document.createElement('div');
