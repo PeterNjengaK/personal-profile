@@ -122,6 +122,14 @@ footer .social-icons a { color: #ead2c2; }
 }
 
 /* Original personal head logo. */
+.portrait-golden-gate { background: #382d3a; }
+.portrait-golden-gate > img { width: 58%; margin-left: auto; object-position: 55% 64%; filter: saturate(.85); }
+@media (max-width: 900px) {
+  .portrait-golden-gate > img { width: 68%; object-position: 55% 64%; }
+}
+@media (max-width: 768px) {
+  .portrait-golden-gate > img { width: 85%; object-position: 55% 60%; }
+}
 .project-cover { min-height: 230px; padding: 32px; background: linear-gradient(135deg, #382d3a, #806282); color: #f7eee5; font-size: 11px; letter-spacing: 2px; display: flex; flex-direction: column; justify-content: space-between; }
 .project-cover span { font-family: Georgia, serif; font-size: 32px; line-height: 1.2; letter-spacing: 0; }
 .project-stack { margin: 16px 0; font-weight: 600; }
