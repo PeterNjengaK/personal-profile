@@ -138,6 +138,13 @@ footer .social-icons a { color: #ead2c2; }
 .wordmark .head-logo { display: block; width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
 
 /* Tools and capabilities: compact cards with distinct creative accents. */
+.floating-text-me { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 1000; display: inline-flex; align-items: center; gap: 11px; min-height: 56px; padding: 14px 23px; border: 1px solid #f3d4bf; border-radius: 999px; background: #e2b497; color: #352939; font-family: 'Poppins', Arial, sans-serif; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 30px #382d3a38; transition: transform .2s, box-shadow .2s, background .2s; }
+.floating-text-me svg { width: 24px; height: 24px; flex: none; }
+.floating-text-me:hover { transform: translateY(-3px); background: #f0c9ae; color: #352939; box-shadow: 0 12px 34px #382d3a45; }
+.floating-text-me:focus-visible { outline: 3px solid #806282; outline-offset: 4px; }
+body:has(.floating-text-me) footer { padding-bottom: 100px; }
+@media (max-width: 600px) { .floating-text-me { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); min-height: 50px; padding: 12px 18px; font-size: 13px; } }
+@media (prefers-reduced-motion: reduce) { .floating-text-me { transition: none; } }
 .skills-container { padding: 40px; background: linear-gradient(145deg, #fffcf8, #f3edf2); }
 .skills-container .section-subtitle { max-width: 600px; margin: 14px auto 34px; }
 .skills-grid.capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
