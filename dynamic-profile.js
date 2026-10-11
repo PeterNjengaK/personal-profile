@@ -222,6 +222,13 @@ function renderProjects(projects) {
     const description = document.createElement('p');
     description.textContent = project.description;
     overlay.append(category, title, description);
+    if (/^case-study-[a-z0-9-]+\.html$/.test(project.caseStudy || '')) {
+      const study = document.createElement('a');
+      study.className = 'text-link case-study-link';
+      study.href = project.caseStudy;
+      study.textContent = 'Read case study ↗';
+      overlay.append(study);
+    }
     if (project.technologies) {
       const stack = document.createElement('p');
       stack.className = 'project-stack';

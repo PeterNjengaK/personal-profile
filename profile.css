@@ -138,6 +138,27 @@ footer .social-icons a { color: #ead2c2; }
 .wordmark .head-logo { display: block; width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
 
 /* Tools and capabilities: compact cards with distinct creative accents. */
+.case-hero { padding-top: 48px; padding-bottom: 38px; }
+.case-hero > .eyebrow { margin-top: 30px; }
+.case-hero h1 { font-size: clamp(32px, 5vw, 54px); max-width: 850px; }
+.case-lead { max-width: 830px; font-size: 17px; }
+.case-content { padding-bottom: 64px; }
+.case-preview { margin: 0 0 45px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #382d3a; }
+.case-preview img { display: block; width: 100%; max-height: 420px; object-fit: contain; }
+.case-preview figcaption { padding: 12px 20px; background: #f1e9ef; color: #69566a; font-size: 12px; }
+.case-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.case-content h2 { font-size: 25px; line-height: 1.35; }
+.case-content .eyebrow { margin-bottom: 12px; }
+.case-panel { padding: 30px; border: 1px solid var(--line); background: #fffcf8; border-radius: 14px; margin: 30px 0; }
+.case-panel li { margin-bottom: 12px; }
+.case-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: workflow; list-style: none; padding: 0; margin: 30px 0 0; }
+.case-flow li { padding: 16px; background: #eee4ef; color: #59455b; border-radius: 9px; font-size: 13px; }
+.case-flow li::before { counter-increment: workflow; content: '0' counter(workflow); display: block; margin-bottom: 8px; font-weight: 600; color: #95758d; }
+.case-status { border-left: 3px solid #b5876c; padding: 10px 24px; margin: 36px 0 48px; }
+.portfolio-overlay .case-study-link { display: flex; width: fit-content; font-weight: 600; }
+.form-status { margin: 16px 0; font-size: 14px; color: #59455b; }
+.email-fallback { font-size: 13px; margin-top: 20px; }
+@media (max-width: 650px) { .case-columns { grid-template-columns: 1fr; gap: 22px; } .case-flow { grid-template-columns: 1fr 1fr; } .case-panel { padding: 22px; } }
 .floating-text-me { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 1000; display: inline-flex; align-items: center; gap: 11px; min-height: 56px; padding: 14px 23px; border: 1px solid #f3d4bf; border-radius: 999px; background: #e2b497; color: #352939; font-family: 'Poppins', Arial, sans-serif; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 30px #382d3a38; transition: transform .2s, box-shadow .2s, background .2s; }
 .floating-text-me svg { width: 24px; height: 24px; flex: none; }
 .floating-text-me:hover { transform: translateY(-3px); background: #f0c9ae; color: #352939; box-shadow: 0 12px 34px #382d3a45; }

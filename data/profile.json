@@ -8,7 +8,7 @@
   "freelance": "Available",
   "degree": "Masters",
   "aboutPageSubtitle": "Software development, project planning, ICT support, and creative work.",
-  "contactPageSubtitle": "Get in touch for any services you may require at very affordable rates",
+  "contactPageSubtitle": "Available for software projects, ICT consulting, and creative collaborations. Tell me what you would like to build.",
   "resumeProfile": "Innovative and deadline-driven Web Developer, Android Developer, Graphic Designer, and Video Editor with 3+ years of experience designing user-centered digital and print material.",
   "pageCopy": {
     "aboutAcademicIntro": "I hold a Master of Science in Project Management & Planning and a Bachelor of Business Information Technology, complemented by studies in networking and cyber security. This background helps me connect technical implementation with real operational needs.",
@@ -31,7 +31,7 @@
     "homeEyebrow": "TECHNOLOGY. CREATIVITY. PURPOSE.",
     "homeExpertiseTitle": "A practical mind. A creative perspective.",
     "homeWorkTitle": "Selected work",
-    "homeContactTitle": "Let's build something meaningful."
+    "homeContactTitle": "Have a project in mind? Let’s build it together."
   },
   "skills": [
     {
@@ -200,7 +200,8 @@
       "technologies": "JavaScript · Node.js · SQLite · Electron",
       "url": "https://github.com/PeterNjengaK/Hospital-IMS",
       "image": "images/projects/Hospital-IMS.svg",
-      "imageAlt": "Carepoint Hospital IMS — illustrated project preview"
+      "imageAlt": "Carepoint Hospital IMS — illustrated project preview",
+      "caseStudy": "case-study-hospital-ims.html"
     },
     {
       "title": "CleanConnect",
@@ -209,7 +210,8 @@
       "technologies": "JavaScript · React · Node.js · MongoDB · Stripe",
       "url": "https://github.com/PeterNjengaK/CleanConnect",
       "image": "images/projects/CleanConnect.svg",
-      "imageAlt": "CleanConnect — illustrated project preview"
+      "imageAlt": "CleanConnect — illustrated project preview",
+      "caseStudy": "case-study-cleanconnect.html"
     },
     {
       "title": "Edwin’s Auto Hub",
@@ -218,7 +220,8 @@
       "technologies": "JavaScript · Node.js · Express · SQLite",
       "url": "https://github.com/PeterNjengaK/edwins-auto-hub",
       "image": "images/projects/edwins-auto-hub.svg",
-      "imageAlt": "Edwin’s Auto Hub — illustrated project preview"
+      "imageAlt": "Edwin’s Auto Hub — illustrated project preview",
+      "caseStudy": "case-study-edwins-auto-hub.html"
     },
     {
       "title": "Church Member Registration",
