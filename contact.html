@@ -382,7 +382,7 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
-      
+
       section {
         padding: 3rem 0;
       }
@@ -424,7 +424,7 @@
       .contact-card {
         padding: 2rem;
       }
-      
+
       .contact-hero {
         padding: 7rem 0 3rem;
       }
@@ -485,7 +485,7 @@
       animation-delay: 0.6s;
     }
   </style>
-  <link rel="stylesheet" href="profile.css?v=shared-contact-1">
+  <link rel="stylesheet" href="profile.css?v=professional-profile-1">
   <script src="profile-ui.js?v=email-app-2" defer></script>
 </head>
 <body class="inner-page">
@@ -527,24 +527,12 @@
       <div class="contact-grid">
         <div class="contact-card fade-in delay-1">
           <h3>Contact Information</h3>
-          
+
           <div class="contact-info">
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <h4>Location</h4>
-                <p data-profile="location">California, USA</p>
-              </div>
-            </div>
-            
-            <div class="info-item">
-              <div class="info-icon">📞</div>
-              <div class="info-content">
-                <h4>Phone</h4>
-                <p><a data-profile-phone href="tel:+1 (707)978 6179">+1 (707)978 6179</a></p>
-              </div>
-            </div>
-            
+
+
+
+
             <div class="info-item">
               <div class="info-icon">✉️</div>
               <div class="info-content">
@@ -554,7 +542,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="contact-card fade-in delay-2" id="send-message">
           <h3>Send Me a Message</h3>
           <form id="contactForm" action="https://formspree.io/f/xeozaqpl" method="POST">
@@ -562,22 +550,22 @@
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="email">Your Email</label>
               <input type="email" id="email" name="email" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="subject">Subject</label>
               <input type="text" id="subject" name="subject" class="form-control" required>
             </div>
-            
+
             <div class="form-group">
               <label for="message">Message</label>
               <textarea id="message" name="message" class="form-control" required></textarea>
             </div>
-            
+
             <button type="submit" class="btn">Send Message</button>
           </form>
         </div>
@@ -618,16 +606,16 @@
   <script>
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.getElementById('main-nav');
-    
+
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
     });
-    
+
     // Close mobile menu when clicking a link
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', () => {
@@ -635,7 +623,7 @@
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
-    
+
     // Highlight active navigation link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('nav a').forEach(link => {
@@ -647,15 +635,15 @@
         link.classList.remove('active');
       }
     });
-    
+
     // Form submission handling
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
+
       // Get form values
       const form = e.target;
       const formData = new FormData(form);
-      
+
       // Submit to Formspree
       fetch(form.action, {
         method: 'POST',

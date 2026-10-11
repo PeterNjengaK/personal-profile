@@ -16,8 +16,8 @@ const originalItems = new WeakMap();
 const scalarFields = [
   ['name', 'Full name', 'text'], ['email', 'Email address', 'email'], ['headline', 'Professional headline', 'textarea'],
   ['aboutIntro', 'About introduction', 'textarea'], ['bio', 'Short bio', 'textarea'], ['resumeProfile', 'Resume summary', 'textarea'],
-  ['phone', 'Phone number', 'tel'], ['location', 'Location', 'text'], ['website', 'Website', 'url'],
-  ['birthday', 'Birthday', 'text'], ['age', 'Age', 'text'], ['degree', 'Highest degree', 'text'], ['freelance', 'Freelance availability', 'text']
+  ['website', 'Website', 'url'],
+  ['degree', 'Highest degree', 'text'], ['freelance', 'Freelance availability', 'text']
 ];
 const pageFields = {
   homeEyebrow: 'Home introduction label', homeExpertiseTitle: 'Home expertise title', homeWorkTitle: 'Home portfolio title', homeContactTitle: 'Home contact invitation',

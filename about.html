@@ -466,7 +466,7 @@
       .skills-grid {
         grid-template-columns: 1fr;
       }
-      
+
       section {
         padding: 3rem 0;
       }
@@ -508,7 +508,7 @@
       .about-intro, .profile-card, .skills-container, .testimonials-container {
         padding: 2rem;
       }
-      
+
       .facts-container {
         grid-template-columns: 1fr 1fr;
       }
@@ -526,7 +526,7 @@
       .about-intro {
         padding: 1.5rem;
       }
-      
+
       .facts-container {
         grid-template-columns: 1fr;
       }
@@ -579,7 +579,7 @@
       animation-delay: 0.6s;
     }
   </style>
-  <link rel="stylesheet" href="profile.css?v=shared-contact-1">
+  <link rel="stylesheet" href="profile.css?v=professional-profile-1">
   <script src="profile-ui.js?v=email-app-2" defer></script>
 </head>
 <body class="inner-page">
@@ -621,37 +621,25 @@
     <section class="container">
       <div class="about-intro fade-in delay-2">
         <h2>Building useful systems. Bringing ideas to life.</h2>
-        <p data-profile="aboutIntro">I am Peter Njenga Kihoro, a software developer, project management specialist, and creative professional based in California. I build web, desktop, and Android applications that turn everyday workflows into practical tools for businesses and communities.</p>
+        <p data-profile="aboutIntro">I am Peter Njenga Kihoro, a software developer, project management specialist, and creative professional. I build web, desktop, and Android applications that turn everyday workflows into practical tools for businesses and communities.</p>
         <p data-profile-path="pageCopy.aboutAcademicIntro">I hold a Master of Science in Project Management &amp; Planning and a Bachelor of Business Information Technology, complemented by studies in networking and cyber security. This background helps me connect technical implementation with real operational needs.</p>
       </div>
 
       <div class="profile-grid">
         <div class="profile-card fade-in">
-          <h3>Personal Info</h3>
-          <div class="info-item">
-            <strong>Birthday:</strong>
-            <span data-profile="birthday">27 May 1995</span>
-          </div>
+          <h3>Professional Overview</h3>
+
           <div class="info-item">
             <strong>Website:</strong>
             <span>https://peternjengak.github.io/</span>
           </div>
-          <div class="info-item">
-            <strong>Phone:</strong>
-            <span data-profile="phone">+1 (707)978 6179</span>
-          </div>
-          <div class="info-item">
-            <strong>City:</strong>
-            <span data-profile="location">California, USA</span>
-          </div>
+
+
         </div>
 
         <div class="profile-card fade-in delay-1">
           <h3>Professional Info</h3>
-          <div class="info-item">
-            <strong>Age:</strong>
-            <span data-profile="age">30</span>
-          </div>
+
           <div class="info-item">
             <strong>Degree:</strong>
             <span data-profile="degree">Masters</span>
@@ -678,30 +666,30 @@
       <div class="skills-container fade-in">
         <h2 class="section-title" data-profile-path="pageCopy.skillsTitle">My Skills</h2>
         <p class="section-subtitle" data-profile-path="pageCopy.skillsSubtitle">Tools and capabilities I use across software, systems, and creative projects.</p>
-        
+
         <div class="skills-grid" data-dynamic-skills><div class="skill-item"><div class="skill-name">Web: HTML, CSS, JavaScript &amp; React</div></div><div class="skill-item"><div class="skill-name">Backend: Node.js &amp; Express</div></div><div class="skill-item"><div class="skill-name">Databases: SQLite &amp; MongoDB</div></div><div class="skill-item"><div class="skill-name">Android: Java &amp; Kotlin</div></div><div class="skill-item"><div class="skill-name">Desktop: Python, Tkinter &amp; Electron</div></div><div class="skill-item"><div class="skill-name">APIs, authentication &amp; role-based access</div></div><div class="skill-item"><div class="skill-name">Project planning &amp; documentation</div></div><div class="skill-item"><div class="skill-name">ICT support &amp; network administration</div></div><div class="skill-item"><div class="skill-name">Design: Adobe Photoshop</div></div><div class="skill-item"><div class="skill-name">Video: Premiere Pro &amp; CapCut</div></div><div class="skill-item"><div class="skill-name">Streaming: OBS</div></div><div class="skill-item"><div class="skill-name">Music production: FL Studio</div></div></div></div></section>
 
     <!-- Facts Section -->
     <section class="container">
       <h2 class="section-title fade-in" data-profile-path="pageCopy.factsTitle">Professional Facts</h2>
       <p class="section-subtitle fade-in delay-1" data-profile-path="pageCopy.factsSubtitle">My engagement levels and achievements</p>
-      
+
       <div class="facts-container" data-dynamic-facts>
         <div class="fact-box fade-in">
           <div class="fact-number">123</div>
           <div class="fact-text">Clients</div>
         </div>
-        
+
         <div class="fact-box fade-in delay-1">
           <div class="fact-number">28</div>
           <div class="fact-text">Projects</div>
         </div>
-        
+
         <div class="fact-box fade-in delay-2">
           <div class="fact-number">1453</div>
           <div class="fact-text">Hours Of Support</div>
         </div>
-        
+
         <div class="fact-box fade-in delay-3">
           <div class="fact-number">5</div>
           <div class="fact-text">Team Members</div>
@@ -744,16 +732,16 @@
   <script>
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-    
+
     // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.getElementById('main-nav');
-    
+
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
     });
-    
+
     // Close mobile menu when clicking a link
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', () => {
@@ -761,7 +749,7 @@
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
-    
+
     // Highlight active navigation link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('nav a').forEach(link => {
@@ -773,7 +761,7 @@
         link.classList.remove('active');
       }
     });
-    
+
     // Animation for skill bars
     document.addEventListener('DOMContentLoaded', function() {
       const skillBars = document.querySelectorAll('.skill-progress');
