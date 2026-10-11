@@ -222,6 +222,13 @@ function renderProjects(projects) {
     const description = document.createElement('p');
     description.textContent = project.description;
     overlay.append(category, title, description);
+    if (/^https:\/\/vwokarati\.com\/?$/.test(project.liveUrl || '')) {
+      const live = document.createElement('a');
+      live.className = 'text-link';
+      live.href = project.liveUrl;
+      live.textContent = 'Visit live website ↗';
+      overlay.append(live);
+    }
     if (/^case-study-[a-z0-9-]+\.html$/.test(project.caseStudy || '')) {
       const study = document.createElement('a');
       study.className = 'text-link case-study-link';

@@ -146,6 +146,7 @@ footer .social-icons a { color: #ead2c2; }
 .case-preview { margin: 0 0 45px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #382d3a; }
 .case-preview img { display: block; width: 100%; max-height: 420px; object-fit: contain; }
 .case-preview figcaption { padding: 12px 20px; background: #f1e9ef; color: #69566a; font-size: 12px; }
+.case-preview.case-screenshot img { max-height: none; height: auto; object-fit: contain; }
 .case-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 .case-content h2 { font-size: 25px; line-height: 1.35; }
 .case-content .eyebrow { margin-bottom: 12px; }

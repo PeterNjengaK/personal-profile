@@ -247,8 +247,10 @@
       "description": "A public church website and shared office portal with a Windows desktop launcher. Includes member registration, attendance, care tasks, reports, staff permissions, website publishing, and administrator backups.",
       "technologies": "JavaScript · Node.js · SQLite · Windows desktop",
       "url": "https://github.com/PeterNjengaK/vwo-karati",
-      "image": "images/projects/vwo-karati.svg",
-      "imageAlt": "VWO Karati Church System — illustrated project preview"
+      "image": "images/projects/vwo-karati-live.png",
+      "imageAlt": "Screenshot of the live VWO Karati church website homepage",
+      "liveUrl": "https://vwokarati.com/",
+      "caseStudy": "case-study-vwo-karati.html"
     },
     {
       "title": "Kabo Crochet Storefront",
